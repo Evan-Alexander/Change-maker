@@ -14,7 +14,7 @@
             $result = $new_change->changeMaker($input);
 
             //Assert
-            $this->assertEquals("2 quarters and 0 dimes and 0 nickels and 0 pennies", $result);
+            $this->assertEquals("2 quarters", $result);
         }
 
         function test_quarteranddime()
@@ -27,7 +27,7 @@
             $result = $new_change->changeMaker($input);
 
             //Assert
-            $this->assertEquals("1 quarters and 2 dimes and 0 nickels and 0 pennies", $result);
+            $this->assertEquals("1 quarters and 2 dimes", $result);
         }
 
         function test_quarteranddimeandnickel()
@@ -40,7 +40,7 @@
             $result = $new_change->changeMaker($input);
 
             //Assert
-            $this->assertEquals("1 quarters and 1 dimes and 1 nickels and 0 pennies", $result);
+            $this->assertEquals("1 quarters and 1 dimes and 1 nickels", $result);
         }
 
         function test_quarteranddimeandnickelandpennies()
