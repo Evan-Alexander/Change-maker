@@ -14,7 +14,20 @@
             $result = $new_change->changeMaker($input);
 
             //Assert
-            $this->assertEquals("2 quarters", $result);
+            $this->assertEquals("2 quarters and 0 dimes", $result);
+        }
+
+        function test_quarteranddime()
+        {
+            //Arrange
+            $new_change = new Change;
+            $input = .45;
+
+            //Act
+            $result = $new_change->changeMaker($input);
+
+            //Assert
+            $this->assertEquals("1 quarters and 2 dimes", $result);
         }
     }
 
