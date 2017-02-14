@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+        <link href="{{ app.request.getbaseurl }}/assets/css/styles.css" rel="stylesheet" type="text/css">
+        <title>Change Maker</title>
+    </head>
+    <body>
+        <div class="container">
+            <h1>Change Maker</h1>
+            <div class="form-group">
+                <form action="/view_results">
+                    <label for="change">Enter some change in cents:</label>
+                    <input type="text" name="change" placeholder="50" class="form-control">
+                    <br>
+
+                    <button type="submit" class="btn btn-success">Submit</button>
+                </form>
+            </div>
+        </div>
+    </body>
+</html>

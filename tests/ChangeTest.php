@@ -8,7 +8,7 @@
         {
             //Arrange
             $new_change = new Change;
-            $input = .50;
+            $input = 50;
 
             //Act
             $result = $new_change->changeMaker($input);
@@ -21,7 +21,7 @@
         {
             //Arrange
             $new_change = new Change;
-            $input = .45;
+            $input = 45;
 
             //Act
             $result = $new_change->changeMaker($input);
@@ -34,7 +34,7 @@
         {
             //Arrange
             $new_change = new Change;
-            $input = .40;
+            $input = 40;
 
             //Act
             $result = $new_change->changeMaker($input);
@@ -47,13 +47,26 @@
         {
             //Arrange
             $new_change = new Change;
-            $input = .41;
+            $input = 41;
 
             //Act
             $result = $new_change->changeMaker($input);
 
             //Assert
             $this->assertEquals("1 quarters and 1 dimes and 1 nickels and 1 pennies", $result);
+        }
+
+        function test_fifteen()
+        {
+            //Arrange
+            $new_change = new Change;
+            $input = 15;
+
+            //Act
+            $result = $new_change->changeMaker($input);
+
+            //Assert
+            $this->assertEquals("1 dimes and 1 nickels", $result);
         }
     }
 
