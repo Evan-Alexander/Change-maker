@@ -12,8 +12,8 @@
 
             $number_of_quarters = floor($input / $quarter);
             $number_of_dimes = floor(($input - ($number_of_quarters * $quarter)) / $dime);
-
-            return "" . $number_of_quarters . " quarters" . " and " . $number_of_dimes . " dimes";
+            $number_of_nickels = floor(($input - ($number_of_quarters * $quarter + $number_of_dimes * $dime)) / $nickel);
+            return "" . $number_of_quarters . " quarters" . " and " . $number_of_dimes . " dimes" . " and " . $number_of_nickels . " nickels";
         }
     }
 
